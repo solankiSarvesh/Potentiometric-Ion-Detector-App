@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Top Blue Bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/blue"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageView
+                android:id="@+id/home_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/home"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:contentDescription="Home Icon" />
+
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <!-- Main Content -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@drawable/card_background"
+            android:elevation="4dp">
+
+            <EditText
+                android:id="@+id/phone_input"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:layout_marginBottom="12dp"
+                android:hint="Enter Phone Number"
+                android:textColorHint="@color/black" />
+
+            <EditText
+                android:id="@+id/message_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="4"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_marginBottom="12dp"
+                android:hint="Enter Message" />
+
+            <Button
+                android:id="@+id/get_report_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Get Report Info"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/blue"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/send_sms_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send SMS"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/green" />
+
+            <TextView
+                android:id="@+id/sms_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <!-- Potassium Table -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Potassium Level (mEq/L)"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingTop="24dp"
+                android:textColor="@color/black" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                android:shrinkColumns="1"
+                android:background="#FFFFFF"
+                android:elevation="2dp">
+
+                <TableRow android:background="#DDDDDD">
+                    <TextView android:text="Result Interpretation" android:padding="8dp" android:textStyle="bold" />
+                    <TextView android:text="Potassium Level" android:padding="8dp" android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="Low" android:padding="8dp" android:textColor="@color/black" />
+                    <TextView android:text="Less than 3.5" android:padding="8dp" android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="Normal" android:padding="8dp" android:textColor="@color/black" />
+                    <TextView android:text="3.5 – 5.0" android:padding="8dp" android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="High" android:padding="8dp" android:textColor="@color/black" />
+                    <TextView android:text="Greater than 5.0" android:padding="8dp" android:textColor="@color/black" />
+                </TableRow>
+            </TableLayout>
+
+            <!-- Sodium Table -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sodium Level (mEq/L)"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingTop="24dp"
+                android:textColor="@color/black" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                android:shrinkColumns="1"
+                android:background="#FFFFFF"
+                android:elevation="2dp">
+
+                <TableRow android:background="#DDDDDD">
+                    <TextView android:text="Result Interpretation" android:padding="8dp" android:textStyle="bold" />
+                    <TextView android:text="Sodium Level" android:padding="8dp" android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="Low" android:padding="8dp" android:textColor="@color/black" />
+                    <TextView android:text="Less than 135" android:padding="8dp" android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="Normal" android:padding="8dp" android:textColor="@color/black" />
+                    <TextView android:text="135 – 145" android:padding="8dp" android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="High" android:padding="8dp" android:textColor="@color/black" />
+                    <TextView android:text="Greater than 145" android:padding="8dp" android:textColor="@color/black" />
+                </TableRow>
+            </TableLayout>
+
+            <!-- pH Table -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blood pH Level"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingTop="24dp"
+                android:textColor="@color/black" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                android:shrinkColumns="1"
+                android:background="#FFFFFF"
+                android:elevation="2dp">
+
+                <TableRow android:background="#DDDDDD">
+                    <TextView android:text="Result Interpretation" android:padding="8dp" android:textStyle="bold" />
+                    <TextView android:text="pH Level" android:padding="8dp" android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="Acidosis" android:padding="8dp" android:textColor="@color/black" />
+                    <TextView android:text="Less than 7.35" android:padding="8dp" android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="Normal" android:padding="8dp" android:textColor="@color/black" />
+                    <TextView android:text="7.35 – 7.45" android:padding="8dp" android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="Alkalosis" android:padding="8dp" android:textColor="@color/black" />
+                    <TextView android:text="Greater than 7.45" android:padding="8dp" android:textColor="@color/black" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

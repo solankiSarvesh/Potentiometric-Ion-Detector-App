@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Custom Blue Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/blue"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/home"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Potassium Test"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@drawable/card_background"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/sample_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample ID"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/sample_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/potential_k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="K⁺ Potential:"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:textColor="#212121" />
+
+            <TextView
+                android:id="@+id/concentration_k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="K⁺ Concentration:"
+                android:textSize="16sp"
+                android:textColor="#212121"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/status_k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/orange" />
+
+            <!-- LineChart for Real-Time Graph -->
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart_potassium"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/white"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/btnNextSodium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NEXT: SODIUM TEST"
+                android:backgroundTint="@color/blue"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

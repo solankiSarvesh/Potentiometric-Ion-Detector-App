@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ion Detector</string>
+
+    <!-- Sign Up Screen Texts -->
+    <string name="signup">Sign Up</string>
+    <string name="fullname_hint">Full Name</string>
+    <string name="email_hint">Email</string>
+    <string name="phone_hint">Phone No</string>
+    <string name="password_hint">Password</string>
+    <string name="already_have_account">Already have an account?</string>
+
+
+    <!-- Login Page Strings -->
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="signup_redirect">No account? Sign Up</string>
+
+</resources>
